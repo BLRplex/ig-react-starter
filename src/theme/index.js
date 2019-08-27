@@ -1,4 +1,10 @@
 export default {
+  unit: {
+    half: '4px',
+    single: '8px',
+    double: '16px',
+    quadriple: '32px',
+  },
   colors: {
     background: '#ffffff',
     backgroundDark: '#f9f9f9',
@@ -9,11 +15,11 @@ export default {
     font: '#222222',
   },
   fontSizes: {
-    werySmall: 12,
-    small: 14,
-    normal: 16,
-    big: 20,
-    weryBig: 24,
+    werySmall: '12px',
+    small: '14px',
+    normal: '16px',
+    big: '20px',
+    weryBig: '24px',
   },
   letterSpacing: {
     normal: 'normal',

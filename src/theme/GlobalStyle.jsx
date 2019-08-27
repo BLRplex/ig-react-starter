@@ -10,4 +10,11 @@ export default createGlobalStyle`
     font-weight: ${props => props.theme.fontWeights.normal};
     font-family: ${props => props.theme.fontFamily}
   }
+
+  main {
+    padding-left: ${props => props.theme.unit.double};
+    padding-right: ${props => props.theme.unit.double};
+    padding-top: ${props => props.theme.unit.quadriple};
+    padding-bottom: ${props => props.theme.unit.quadriple};
+  }
 `

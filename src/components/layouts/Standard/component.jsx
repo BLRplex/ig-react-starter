@@ -1,11 +1,14 @@
 import React from 'react'
 import pt from 'prop-types'
 
+import Header from '@/components/blocks/global/Header'
+import Footer from '@/components/blocks/global/Footer'
+
 const StandardLayout = ({ children }) => (
   <div>
-    <header>Header should be here</header>
+    <Header />
     <main>{children}</main>
-    <footer>Footer should be here</footer>
+    <Footer />
   </div>
 )
 
