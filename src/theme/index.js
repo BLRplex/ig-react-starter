@@ -4,6 +4,7 @@ export default {
     single: '8px',
     double: '16px',
     quadriple: '32px',
+    eight: '64px',
   },
   colors: {
     background: '#ffffff',
