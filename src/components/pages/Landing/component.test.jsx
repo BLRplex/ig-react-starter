@@ -14,10 +14,5 @@ it('Landing page has no visual regressions', async () => {
     </ThemeProviderWrapper>
   )
 
-  const tests = screenshotsTests()
-
-  for (let i = 0; i < tests.length; i += 1) {
-    const test = await tests[i]
-    expect(test).toMatchImageSnapshot()
-  }
+  await screenshotsTests(expect)
 })
