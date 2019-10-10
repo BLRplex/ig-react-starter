@@ -1,6 +1,6 @@
 import { configureToMatchImageSnapshot } from 'jest-image-snapshot'
 
-jest.setTimeout(10000)
+jest.setTimeout(30000)
 
 expect.extend({
   toMatchImageSnapshot: configureToMatchImageSnapshot({

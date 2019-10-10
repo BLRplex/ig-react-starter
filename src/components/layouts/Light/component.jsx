@@ -1,5 +1,6 @@
 import React from 'react'
-import pt from 'prop-types'
+
+import { childrenPropType } from '@/prop-types'
 
 const LightLayout = ({ children }) => (
   <div>
@@ -8,10 +9,7 @@ const LightLayout = ({ children }) => (
 )
 
 LightLayout.propTypes = {
-  children: pt.oneOfType([
-    pt.string.isRequired,
-    pt.element.isRequired,
-  ]),
+  children: childrenPropType,
 }
 
 export default LightLayout

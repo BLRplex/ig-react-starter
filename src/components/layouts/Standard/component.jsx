@@ -1,8 +1,9 @@
 import React from 'react'
-import pt from 'prop-types'
 
 import Header from '@/components/blocks/global/Header'
 import Footer from '@/components/blocks/global/Footer'
+
+import { childrenPropType } from '@/prop-types'
 
 const StandardLayout = ({ children }) => (
   <div>
@@ -13,10 +14,7 @@ const StandardLayout = ({ children }) => (
 )
 
 StandardLayout.propTypes = {
-  children: pt.oneOfType([
-    pt.string.isRequired,
-    pt.element.isRequired,
-  ]),
+  children: childrenPropType,
 }
 
 export default StandardLayout

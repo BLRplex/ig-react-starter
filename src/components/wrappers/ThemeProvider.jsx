@@ -1,9 +1,9 @@
 import React from 'react'
-import pt from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyle from '@/theme/GlobalStyle'
 import theme from '@/theme'
+import { childrenPropType } from '@/prop-types'
 
 const ThemeProviderWrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -15,10 +15,7 @@ const ThemeProviderWrapper = ({ children }) => (
 )
 
 ThemeProviderWrapper.propTypes = {
-  children: pt.oneOfType([
-    pt.string.isRequired,
-    pt.element.isRequired,
-  ]),
+  children: childrenPropType,
 }
 
 export default ThemeProviderWrapper

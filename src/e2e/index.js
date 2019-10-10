@@ -1,37 +1,29 @@
 import { generateImage } from 'jsdom-screenshot'
+import resolutions from './resolutions'
 
 const commonSettings = {
   waitUntilNetworkIdle: true,
 }
 
-export const resolutions = {
-  '1024x768': {
-    viewport: {
-      width: 1024,
-      height: 768,
-    },
-  },
-  '1280x800': {
-    viewport: {
-      width: 1280,
-      height: 800,
-    },
-  },
-  '1920x1280': {
-    viewport: {
-      width: 1920,
-      height: 1280,
-    },
-  },
+export const snapshotConfiguration = ({ filename }) => {
+  return {
+    customSnapshotIdentifier: filename,
+  }
 }
 
-export default async expect => {
+export default async (expect, componentName) => {
   const tests = Object
     .keys(resolutions)
-    .map(resolution => generateImage(Object.assign(commonSettings, resolutions[resolution])))
+    .map(resolution => ({
+      image: generateImage(Object.assign(commonSettings, resolutions[resolution])),
+      resolutionCode: resolution,
+    }))
 
   for (let i = 0; i < tests.length; i += 1) {
-    const test = await tests[i]
-    expect(test).toMatchImageSnapshot()
+    const { image, resolutionCode } = tests[i]
+    const filename = `${componentName}-${resolutionCode}`
+
+    const testResult = await image
+    expect(testResult).toMatchImageSnapshot(snapshotConfiguration({ filename }))
   }
 }
