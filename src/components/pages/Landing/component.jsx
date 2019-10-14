@@ -1,10 +1,11 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import StandardLayout from '@/components/layouts/Standard'
 
 const LandingPage = () => (
   <StandardLayout>
-    Page content should be there
+    <FormattedMessage id="page_content_placeholder" />
   </StandardLayout>
 )
 

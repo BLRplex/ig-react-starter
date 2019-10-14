@@ -12,7 +12,7 @@ const sagaMiddleware = createSagaMiddleware()
 const createDevelopmentStore = () => {
   return createStore(
     reducer,
-    applyMiddleware(sagaMiddleware, reduxLogger)
+    applyMiddleware(sagaMiddleware, reduxLogger),
   )
 }
 

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
+import internalization from './internalization'
+
 export default combineReducers({
-  root: function (state = {}) {
-    return state
-  },
+  internalization,
 })

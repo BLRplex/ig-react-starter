@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom'
+import { FormattedMessage } from 'react-intl'
 
 import LightLayout from '@/components/layouts/Light'
 
@@ -10,9 +11,11 @@ import Wrapper from './styles'
 const LandingPage = () => (
   <LightLayout>
     <Wrapper>
-      You have no access to open this page
+      <FormattedMessage id="access_denied" />
       <br />
-      <Link to={LANDING_PAGE_PATH}>Return Home</Link>
+      <Link to={LANDING_PAGE_PATH}>
+        <FormattedMessage id="return_home" />
+      </Link>
     </Wrapper>
   </LightLayout>
 )
