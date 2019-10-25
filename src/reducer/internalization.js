@@ -1,4 +1,4 @@
-import { SEL_LOCALE, ENGLISH } from '@/constants'
+import { SET_LOCALE, ENGLISH } from '@/constants'
 
 const initialState = {
   active: ENGLISH,
@@ -6,7 +6,7 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case SEL_LOCALE: return {
+    case SET_LOCALE: return {
       ...state,
       active: action.payload,
     }

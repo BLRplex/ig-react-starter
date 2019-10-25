@@ -1,6 +1,6 @@
-import { SEL_LOCALE } from '@/constants'
+import { SET_LOCALE } from '@/constants'
 
 export const setLocale = locale => ({
   payload: locale,
-  type: SEL_LOCALE,
+  type: SET_LOCALE,
 })

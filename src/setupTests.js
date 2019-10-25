@@ -6,8 +6,8 @@ expect.extend({
   toMatchImageSnapshot: configureToMatchImageSnapshot({
     customSnapshotsDir: 'snapshots/origin',
     customDiffDir: 'snapshots/diff',
-    failureThreshold: 0.5,
-    failureThresholdType: 'percent',
-    noColors: true,
+    // failureThreshold: 5,
+    // failureThresholdType: 'percent',
+    // noColors: true,
   }),
 })

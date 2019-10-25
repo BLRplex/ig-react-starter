@@ -9,4 +9,8 @@ export default styled.header`
   padding-right: ${props => props.theme.unit.quadriple};
   padding-top: ${props => props.theme.unit.double};
   padding-bottom: ${props => props.theme.unit.double};
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 `
